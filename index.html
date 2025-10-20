@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Jednoduchá stránka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    b {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nadpis stránky</h1>
+  <p><b id="kozak">Kozáku</b>, to stačí!</p>
+
+  <script>
+    const kozak = document.getElementById("kozak");
+
+    kozak.addEventListener("mouseenter", () => {
+      kozak.style.fontWeight = "normal"; 
+      kozak.style.fontStyle = "italic"; 
+    });
+
+    kozak.addEventListener("mouseleave", () => {
+      kozak.style.fontWeight = "bold";   
+      kozak.style.fontStyle = "normal";  
+    });
+  </script>
+</body>
+</html>
